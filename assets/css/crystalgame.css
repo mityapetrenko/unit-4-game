@@ -1,0 +1,49 @@
+body {
+    background-image: url("../images/morocco-blue.png");
+}
+h1 {
+background-color: orange;
+padding: 20px;
+width:250px;
+}
+#instructions {
+background-color:lightsalmon;
+width:300px;
+height:300px;
+
+}
+#winlose {
+background-color:teal;
+
+}
+#computerGuess {
+background-color: lightgreen;
+width:200px;
+height:100px;
+margin-top: 10px;
+}
+#crystals{
+    background-color:white;
+    padding:10px;
+    box-sizing: border-box;
+    width: 33%;
+    margin-top: 10px;
+
+
+}
+h2 {
+    background-color: greenyellow;
+    width: 200px;
+
+}
+#userScore{
+    background-color: greenyellow;
+    padding:20px;
+    width: 200px;
+    height: 100px;
+
+}
+.crystal-images{
+    width:100px;
+    height:100px;
+}
