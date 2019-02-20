@@ -5,35 +5,47 @@ h1 {
 background-color: orange;
 padding: 20px;
 width:250px;
+margin:10px;
 }
 #instructions {
 background-color:lightsalmon;
-width:300px;
-height:300px;
+width:500px;
+height:200px;
+margin: 10px;
 
 }
 #winlose {
 background-color:teal;
+color:black;
+width: 50px;
+height:100px;
+
+position: absolute;
+top: 307px;
+left:220px;
 
 }
 #computerGuess {
 background-color: lightgreen;
 width:200px;
 height:100px;
-margin-top: 10px;
+margin: 10px;
+color:black;
+
 }
 #crystals{
     background-color:white;
     padding:10px;
     box-sizing: border-box;
-    width: 33%;
-    margin-top: 10px;
+    width:500px;
+    margin: 10px;
 
 
 }
 h2 {
     background-color: greenyellow;
     width: 200px;
+    margin:10px;
 
 }
 #userScore{
@@ -41,6 +53,8 @@ h2 {
     padding:20px;
     width: 200px;
     height: 100px;
+    color:black;
+    margin:10px;
 
 }
 .crystal-images{
