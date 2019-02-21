@@ -1,39 +1,99 @@
 $( document ).ready( function(){
-//Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-var numberOptions = [1,2,3,4,5,6,7,8,9,10,11,12]
+
+var targetNumber=Math.floor(Math.random() * (120 - 19 + 1)) + 19;
 var wins=0;
 var losses=0;
-var targetNumber=Math.floor(Math.random() * (120 - 19 + 1)) + 19;
 var counter=0;
+var num1= Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+var num2=Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+var num3= Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+var num4= Math.floor(Math.random() * (12 - 1 + 1)) + 1;
 
 $("#computerGuess").text(targetNumber);
 $("#userScore").text(counter);
-$("#winlose").text("Wins " + wins);
-$("#winlose").text("Losses " + losses);
-for (var i = 0; i < numberOptions.length; i++) {
-    var imageCrystal=$("<img>");
-    imageCrystal.addClass("crystal-image");
-imageCrystal.attr("data-crystalvalue", numberOptions[i]);
-console.log(imageCrystal);
-}
+$("#win").text("Wins " + wins);
+$("#loss").text("Losses " + losses);
 
-$(".crystal-images").on("click", function() {
-    
-    var crystalValue = ($(this).attr("data-crystalvalue"));
-    crystalValue = parseInt(crystalValue);
-    counter += crystalValue;
-    console.log(counter);
-    console.log(crystalValue)
+function reset(){
+  counter=0;
+  num1= Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+  num2=Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+  num3= Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+  num4= Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+  targetNumber=Math.floor(Math.random() * (120 - 19 + 1)) + 19;
+  $("#computerGuess").text(targetNumber);
+  $("#userScore").text(counter);
+}
+function winner(){
+  wins++;
+  alert("Congrats, you won!!");
+  reset();
+  $("#win").text("Wins " + wins);
+}
+function looser(){
+  losses++;
+  alert("You lost, sorry...");
+  reset();
+  $("#loss").text("Losses " + losses);
+}
+$("#one").on("click", function() {
+  counter=counter + num1;
+  $("#userScore").text(counter);
+  
     if (counter === targetNumber) {
       
-      wins++; counter=0; score=0;
+      winner();
     }
 
     else if (counter >= targetNumber) {
     
-      losses--; counter=0;
+      looser();
     }
   
 
   });
+  $("#two").on("click", function() {
+    counter=counter + num2;
+    $("#userScore").text(counter);
+      if (counter === targetNumber) {
+        
+        winner();
+      }
+  
+      else if (counter >= targetNumber) {
+      
+        looser();
+      }
+    
+  
+    });
+    $("#three").on("click", function() {
+      counter=counter + num3;
+      $("#userScore").text(counter);
+        if (counter === targetNumber) {
+          
+          winner();
+        }
+    
+        else if (counter >= targetNumber) {
+        
+          looser();
+        }
+      
+      });
+      $("#four").on("click", function() {
+        counter=counter + num4;
+        $("#userScore").text(counter);
+          if (counter === targetNumber) {
+            
+            winner();
+          }
+      
+          else if (counter >= targetNumber) {
+          
+            looser();
+          }
+        
+      
+        });
 });
